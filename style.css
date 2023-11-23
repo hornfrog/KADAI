@@ -1,8 +1,19 @@
+a {
+    text-decoration: none;
+  }
+
+a:visited{
+    color: black;
+}
+
 .HeaderNavList {
     align-items: center;
     display: flex;
     justify-content: space-between;
+  
+    
 }
+
 
 .HeaderNavListItem {
     margin-right: 45px;
@@ -27,7 +38,6 @@
     background-color: #f79214;
     border: none;
     border-radius: 38px;
-    color: #fff;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -41,6 +51,10 @@
     padding: 0 20px;
 }
 
+.HeaderNavListItem__button:visited {
+    color: #fff;
+}
+
 section {
     display: block;
 }
@@ -51,6 +65,10 @@ section {
     background-position: center;
     padding-top: 100px;
     padding-bottom: 28px;
+}
+
+.FirstView__main-image {
+    width: 100%;
 }
 
 .FirstView__main-image--sp {
@@ -210,7 +228,6 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
     background-color: #f79214;
     border: none;
     border-radius: 38px;
-    color: #fff;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -221,6 +238,10 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
     width: 100%;
     font-size: 16px;
     height: 64px;
+}
+
+.FirstViewContent__button:visited {
+    color: #fff;
 }
 
 .About {
@@ -285,3 +306,107 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 .About__reskilling-logo>img {
     width: 158px;
 }
+
+@media screen and (max-width: 767px){
+    .HeaderNavList {
+        verflow-y: scroll;
+    position: fixed;
+    top: 60px;
+    left: 100%;
+    width: 100%;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 75px;
+    transition: transform .5s;
+    z-index: 99;
+    background-color: 
+}
+
+    .HeaderContainer {
+        max-width: 100%;
+        margin: 0 20px;
+    }
+
+    .HeaderNavHamburger {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 21px;
+        z-index: 100;
+    }
+
+    .HeaderNavHamburger__line:first-child {
+        top: 0;
+    }
+    .HeaderNavHamburger__line {
+        position: absolute;
+        top: 50%;
+        display: block;
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        transform: translate(0,-50%);
+        border-radius: 10px;
+        transition: top .2s,transform .2s,opacity .3s;
+    }
+
+    .HeaderNavHamburger__line:last-child {
+        top: 100%;
+    }
+
+    .FirstView__main-image--sp {
+        display: block;
+    }
+    main {
+        padding-top: 52px;
+    }
+
+    .FirstView {
+        background-image: none;
+        padding-top: 0;
+        padding-bottom: 35px;
+    }
+
+    .FirstView__container {
+        margin-top: -45vw;
+    }
+
+    .FirstViewContent__title {
+        font-size: 25px;
+        line-height: 36px;
+        margin-left: calc(((100vw - 100%)/2)*-1);
+        margin-right: calc(((100vw - 100%)/2)*-1);
+    }
+
+    .FirstViewContent__images img {
+        width: 27.5%;
+    }
+
+    .FirstViewContent__images img:nth-of-type(2) {
+        width: 40%;
+    }
+
+    .About {
+        flex-direction: column;
+        max-width: none;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .About__video {
+        width: 100%;
+        margin-bottom: 16px;
+}
+
+.About__title {
+    margin-bottom: 0;
+    width: 100%;
+    margin-left: 0;
+}
+
+.About__reskilling-logo {
+    margin: auto;
+}
+}
+
